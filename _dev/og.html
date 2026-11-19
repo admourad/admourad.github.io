@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Source for /og-image.png (1200x630). Rebuild: see _dev/README.md -->
+<html lang="en"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&display=block" rel="stylesheet">
+<style>
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; background: #0d0c0a; color: #ede6d6; }
+  .frame { position: absolute; inset: 0; padding: 44px 56px; }
+  .mono { font-family: "JetBrains Mono", monospace; font-size: 18px; letter-spacing: .06em; text-transform: uppercase; color: #8c8578; }
+  .top { display: flex; justify-content: space-between; }
+  .top b { color: #ede6d6; font-weight: 500; }
+  .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: #ff8a1f; margin-right: 10px; vertical-align: 2px; }
+  h1 { position: relative; z-index: 2; margin: 22px 0 0; font-family: "Big Shoulders Display", sans-serif; font-weight: 800; font-size: 214px; line-height: .8; text-transform: uppercase; letter-spacing: -.01em; }
+  h1 > span { display: block; white-space: nowrap; }
+  h1 > span + span { padding-left: 150px; }
+  .star { display: inline-block; color: #ff8a1f; font-size: .42em; vertical-align: .9em; margin-left: .1em; }
+  canvas { position: absolute; left: 0; bottom: 0; width: 1200px; height: 300px; z-index: 1; }
+  .foot { position: absolute; left: 56px; right: 56px; bottom: 38px; display: flex; justify-content: space-between; z-index: 3; }
+  .foot .it { font-family: "Instrument Serif", serif; font-style: italic; text-transform: none; font-size: 30px; letter-spacing: 0; color: #ede6d6; }
+  .tag { position: absolute; z-index: 3; right: 56px; font-family: "JetBrains Mono", monospace; font-size: 18px; background: #ff8a1f; color: #0d0c0a; padding: 5px 10px; }
+</style></head>
+<body><div class="frame">
+  <div class="top mono"><span><span class="dot"></span>DXB · YYZ · LON</span><span>Finance &amp; Accounting <span style="color:#ff8a1f">/</span> <b>CFA Level I candidate</b></span></div>
+  <h1><span>Adam<span class="star">✦</span></span><span>Mourad</span></h1>
+</div>
+<canvas id="c" width="2400" height="600"></canvas>
+<div class="tag" id="tag">+120.4%</div>
+<div class="foot mono"><span>FP&amp;A · Capital markets · Investment banking</span><span class="it">Markets, or mountains.</span></div>
+<script>
+  // Same seeded line as the site's hero chart.
+  let seed = 7; const rand = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  const N = 220, pts = []; let v = 0.42;
+  for (let i = 0; i < N; i++) { v += Math.sin(i / 34) * 0.004 + 0.0016 + (rand() - 0.5) * 0.05; v = Math.max(0.08, Math.min(0.95, v)); pts.push(v); }
+  const sm = pts.map((p, i) => { let s = 0, c = 0; for (let k = -2; k <= 2; k++) { const j = i + k; if (j >= 0 && j < N) { s += pts[j]; c++; } } return s / c; });
+  const cv = document.getElementById("c"), ctx = cv.getContext("2d"); ctx.scale(2, 2);
+  const w = 1200, h = 300, padT = 20, padB = 70, x = i => i / (N - 1) * w, y = v => padT + (1 - v) * (h - padT - padB);
+  ctx.beginPath(); ctx.moveTo(0, h); sm.forEach((p, i) => ctx.lineTo(x(i), y(p))); ctx.lineTo(w, h); ctx.closePath();
+  const g = ctx.createLinearGradient(0, padT, 0, h); g.addColorStop(0, "rgba(255,138,31,.28)"); g.addColorStop(1, "rgba(255,138,31,0)");
+  ctx.fillStyle = g; ctx.fill();
+  ctx.beginPath(); sm.forEach((p, i) => i ? ctx.lineTo(x(i), y(p)) : ctx.moveTo(x(i), y(p)));
+  ctx.strokeStyle = "#ff8a1f"; ctx.lineWidth = 3; ctx.lineJoin = "round"; ctx.stroke();
+  const t = document.getElementById("tag"); t.textContent = "+" + ((sm[N - 1] / sm[0] - 1) * 100).toFixed(1) + "%";
+  t.style.top = (630 - 300 + y(sm[N - 1]) - 16) + "px"; t.style.right = "0px";
+</script>
+</body></html>

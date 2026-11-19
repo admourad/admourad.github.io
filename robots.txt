@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+# The CV stays downloadable from the site but out of search results.
+Disallow: /cv/
+
+Sitemap: https://admourad.github.io/sitemap.xml

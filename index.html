@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adam Mourad</title>
+<meta name="description" content="Adam Mourad: finance and accounting graduate and CFA Level I candidate, based in Dubai. Open to FP&amp;A, capital markets and investment banking roles in Canada, London and Dubai.">
+<link rel="canonical" href="https://admourad.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://admourad.github.io/">
+<meta property="og:site_name" content="Adam Mourad">
+<meta property="og:title" content="Adam Mourad">
+<meta property="og:description" content="Finance graduate, CFA Level I candidate, endurance athlete. Dubai / Toronto / London.">
+<meta property="og:image" content="https://admourad.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Adam Mourad: finance graduate and CFA Level I candidate. An amber line chart that doubles as a race elevation profile.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0d0c0a">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Adam Mourad","url":"https://admourad.github.io/","sameAs":["https://www.linkedin.com/in/adammourad/","https://www.youtube.com/@PavementandPeaks"],"jobTitle":"Finance Graduate, CFA Level I Candidate","address":{"@type":"PostalAddress","addressLocality":"Dubai","addressCountry":"AE"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Canadian University Dubai"},"knowsAbout":["Financial modelling","Valuation","FP&A","Capital markets","Real estate investment analysis"]}
+</script>
+<script>
+  /* Flags read before first paint. Content never depends on these. */
+  document.documentElement.classList.add("js");
+  window.__heroScrub = !matchMedia("(prefers-reduced-motion: reduce)").matches && matchMedia("(min-width: 701px)").matches;
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300..900&family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: a trading screen that is also a race. One line is both a price chart and an elevation profile; the page reads like a terminal printed as a magazine. Single dark theme by choice. */
+:root {
+  --ink: #0d0c0a;
+  --ink-2: #171512;
+  --paper: #ede6d6;
+  --dim: #8c8578;
+  --line: #2c2924;
+  --amber: #ff8a1f;
+  --display: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
+  --serif: "Instrument Serif", Georgia, serif;
+  --body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+html { scroll-padding-top: 64px; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+body {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.55;
+  overflow-x: hidden;
+}
+::selection { background: var(--amber); color: var(--ink); }
+a { color: inherit; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
+.mono { font-family: var(--mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; }
+.amber { color: var(--amber); }
+.it { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spacing: 0; text-transform: none; }
+
+/* ---------- Top bar ---------- */
+.bar {
+  position: sticky; top: 0; z-index: 20;
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  padding: 12px clamp(16px, 3vw, 40px);
+  background: color-mix(in srgb, var(--ink) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.bar nav { display: flex; gap: 20px; }
+.bar nav a { text-decoration: none; color: var(--dim); }
+.bar nav a:hover { color: var(--paper); }
+.clocks { display: flex; gap: 18px; color: var(--dim); font-variant-numeric: tabular-nums; }
+.clocks b { color: var(--paper); font-weight: 500; }
+.clocks .live::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--amber); margin-right: 6px; vertical-align: 1px; animation: blink 1.6s steps(2) infinite; }
+@keyframes blink { 50% { opacity: .25; } }
+
+/* ---------- Hero ---------- */
+.hero { position: relative; padding: clamp(28px, 5vw, 56px) clamp(16px, 3vw, 40px) 0; }
+.hero-meta { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; color: var(--dim); margin-bottom: 8px; }
+.name {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(88px, 19vw, 300px);
+  line-height: .8;
+  letter-spacing: -.01em;
+  text-transform: uppercase;
+  margin: 0;
+  position: relative; z-index: 2;
+  user-select: none;
+}
+.name .row { display: block; white-space: nowrap; }
+.name .row:last-child { padding-left: 12vw; }
+.name span.ch { display: inline-block; font-variation-settings: "wght" var(--w, 800); transition: font-variation-settings .25s ease-out; }
+.name .star { color: var(--amber); font-size: .42em; vertical-align: .9em; margin: 0 .08em; display: inline-block; animation: spin 9s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.hero-intro { position: relative; z-index: 2; margin: 28px 0 0 12vw; max-width: 46ch; font-size: clamp(17px, 1.5vw, 21px); line-height: 1.45; color: #cfc7b6; text-wrap: pretty; }
+.hero-intro strong { color: var(--paper); font-weight: 600; }
+.chart-wrap { position: relative; margin-top: 12px; height: clamp(220px, 32vw, 420px); z-index: 1; }
+#hero-chart { width: 100%; height: 100%; display: block; }
+.mode {
+  position: absolute; right: 0; top: 12px; z-index: 3;
+  display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; background: var(--ink);
+}
+.mode button {
+  font: inherit; font-family: var(--mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase;
+  background: none; border: 0; color: var(--dim); padding: 7px 14px; border-radius: 999px; cursor: pointer;
+}
+.mode button[aria-pressed="true"] { background: var(--amber); color: var(--ink); }
+.chart-caption { position: absolute; left: 0; top: 16px; color: var(--dim); z-index: 3; max-width: 40ch; }
+
+/* ---------- Ticker ---------- */
+.ticker { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); overflow: hidden; background: var(--ink-2); }
+.ticker-track { display: flex; width: max-content; }
+.js .ticker-track { animation: tick 48s linear infinite; }
+.motion .ticker-track { animation: none; }
+.ticker:hover .ticker-track { animation-play-state: paused; }
+.ticker-item { padding: 12px 28px; white-space: nowrap; border-right: 1px solid var(--line); }
+.ticker-item i { font-style: normal; color: var(--amber); margin-right: 8px; }
+@keyframes tick { to { transform: translateX(-50%); } }
+
+/* ---------- Statement ---------- */
+.wrap { padding: 0 clamp(16px, 3vw, 40px); }
+.statement { padding: clamp(64px, 10vw, 140px) 0; display: grid; grid-template-columns: 200px 1fr; gap: 32px; border-bottom: 1px solid var(--line); }
+.statement p {
+  font-family: var(--display); font-weight: 600; text-transform: uppercase;
+  font-size: clamp(36px, 5.4vw, 80px); line-height: .98; margin: 0; max-width: 20ch; text-wrap: balance;
+}
+.statement p .it { font-size: 1.08em; color: var(--amber); }
+.side { color: var(--dim); padding-top: 10px; }
+
+/* ---------- Section head ---------- */
+.sec { padding: clamp(56px, 8vw, 110px) 0; border-bottom: 1px solid var(--line); }
+.sec-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; margin-bottom: 40px; }
+.sec-head h2 { font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: clamp(56px, 9vw, 140px); line-height: .85; margin: 0; }
+.sec-head .mono { color: var(--dim); }
+
+/* ---------- Blotter (experience) ---------- */
+.blotter { width: 100%; border-collapse: collapse; }
+.blotter-head, .trade-sum { display: grid; grid-template-columns: 110px 1.3fr 1.3fr 1fr 32px; gap: 16px; align-items: center; }
+.blotter-head { color: var(--dim); padding: 0 0 12px; border-bottom: 1px solid var(--paper); }
+.trade { border-bottom: 1px solid var(--line); }
+.trade-sum { width: 100%; background: none; border: 0; color: inherit; font: inherit; text-align: left; padding: 22px 0; cursor: pointer; }
+.trade-sum:hover .firm { color: var(--amber); }
+.status { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; padding: 4px 8px; border: 1px solid var(--line); border-radius: 3px; justify-self: start; color: var(--dim); }
+.status.live { border-color: var(--amber); color: var(--amber); }
+.firm small { display: block; margin-top: 6px; font-family: var(--mono); font-size: 11px; font-weight: 400; letter-spacing: .06em; color: var(--dim); }
+.firm { font-family: var(--display); font-weight: 700; font-size: clamp(28px, 3.4vw, 46px); text-transform: uppercase; line-height: 1; transition: color .2s; }
+.role { font-size: 16px; }
+.when { font-family: var(--mono); font-size: 13px; color: var(--dim); font-variant-numeric: tabular-nums; }
+.plus { font-family: var(--mono); font-size: 22px; color: var(--dim); transition: transform .25s; justify-self: end; }
+.trade[data-open="true"] .plus { transform: rotate(45deg); color: var(--amber); }
+.trade-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .35s ease; }
+.trade[data-open="true"] .trade-body { grid-template-rows: 1fr; }
+.trade-body > div { overflow: hidden; }
+.trade-body ul { margin: 0; padding: 0 0 26px 126px; list-style: none; max-width: 900px; display: grid; gap: 8px; }
+.trade-body li { padding-left: 22px; position: relative; color: #cfc7b6; }
+.trade-body li::before { content: "▲"; position: absolute; left: 0; top: 3px; font-size: 10px; color: var(--amber); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 0 26px 126px; }
+.chips span { font-family: var(--mono); font-size: 12px; border: 1px solid var(--line); padding: 4px 9px; border-radius: 3px; color: var(--dim); }
+
+/* ---------- CapDeploy demo ---------- */
+.case { display: grid; grid-template-columns: 1fr 1.25fr; gap: clamp(24px, 4vw, 64px); align-items: start; }
+.case-copy h3 { font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: clamp(48px, 6vw, 92px); line-height: .85; margin: 0 0 20px; }
+.case-copy p { color: #cfc7b6; max-width: 46ch; margin: 0 0 16px; }
+.case-copy .cta { display: inline-flex; gap: 10px; align-items: center; margin-top: 8px; padding: 14px 20px; background: var(--amber); color: var(--ink); text-decoration: none; font-weight: 600; border-radius: 2px; }
+.case-copy .cta:hover { background: var(--paper); }
+.term { background: var(--ink-2); border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
+.term-top { display: flex; justify-content: space-between; padding: 10px 16px; border-bottom: 1px solid var(--line); color: var(--dim); }
+.term-grid { display: grid; grid-template-columns: 1fr 1fr; }
+.controls { padding: 18px 16px; display: grid; gap: 16px; border-right: 1px solid var(--line); }
+.ctl label { display: flex; justify-content: space-between; gap: 8px; color: var(--dim); margin-bottom: 6px; }
+.ctl output { color: var(--paper); font-variant-numeric: tabular-nums; }
+input[type="range"] { -webkit-appearance: none; appearance: none; width: 100%; height: 2px; background: var(--line); outline: none; margin: 6px 0; }
+input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 14px; height: 14px; background: var(--amber); border-radius: 0; cursor: pointer; }
+input[type="range"]::-moz-range-thumb { width: 14px; height: 14px; background: var(--amber); border: 0; border-radius: 0; cursor: pointer; }
+.results { padding: 18px 16px; display: grid; gap: 14px; align-content: start; }
+.kpi .mono { color: var(--dim); }
+.kpi .v { font-family: var(--display); font-weight: 700; font-size: clamp(34px, 3.6vw, 52px); line-height: 1; font-variant-numeric: tabular-nums; }
+.kpi .v.big { color: var(--amber); font-size: clamp(48px, 5vw, 76px); }
+.split { color: var(--dim); }
+#cf-chart { width: 100%; height: 150px; display: block; border-top: 1px solid var(--line); }
+.term-foot { padding: 10px 16px; color: var(--dim); border-top: 1px solid var(--line); font-size: 11px; }
+
+/* ---------- Off the desk ---------- */
+.desk { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--paper); }
+.desk > div { padding: 28px 24px 28px 0; }
+.desk > div + div { padding-left: 24px; border-left: 1px solid var(--line); }
+.desk .big { font-family: var(--display); font-weight: 800; font-size: clamp(48px, 5.5vw, 90px); overflow-wrap: anywhere; text-transform: uppercase; line-height: .85; }
+.desk p { color: #cfc7b6; margin: 14px 0 0; max-width: 34ch; }
+.desk .mono { color: var(--dim); display: block; margin-bottom: 18px; }
+
+/* ---------- Contact ---------- */
+.contact { padding: clamp(72px, 12vw, 160px) 0 40px; }
+.contact .mono { color: var(--dim); }
+.talk { display: block; font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: clamp(80px, 17vw, 270px); line-height: .82; margin: 16px 0 40px; text-decoration: none; }
+.talk span { display: inline-block; transition: color .2s, transform .3s; }
+.talk:hover span { color: var(--amber); }
+.motion .talk:not(.revealed) span { transition: color .2s; }
+.talk:hover .arrow { transform: translate(.08em, -.08em); }
+.links { display: flex; flex-wrap: wrap; gap: 12px; }
+.links a { font-family: var(--mono); font-size: 13px; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; padding: 12px 18px; border: 1px solid var(--line); border-radius: 2px; }
+.links a:hover { border-color: var(--amber); color: var(--amber); }
+footer { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 24px 0 32px; border-top: 1px solid var(--line); color: var(--dim); }
+
+/* ---------- Motion layer (only styles things motion.js creates) ---------- */
+.progress { position: absolute; left: 0; right: 0; bottom: -1px; height: 1px; background: var(--amber); transform-origin: 0 50%; transform: scaleX(0); pointer-events: none; }
+.ln { display: block; overflow: hidden; padding-bottom: .06em; margin-bottom: -.06em; }
+.ln-i { display: block; }
+.has-cursor, .has-cursor * { cursor: none !important; }
+.cursor-dot, .cursor-ring { position: fixed; left: 0; top: 0; z-index: 100; pointer-events: none; border-radius: 50%; opacity: 0; transition: opacity .2s; }
+.cursor-on .cursor-dot, .cursor-on .cursor-ring { opacity: 1; }
+.cursor-dot { width: 6px; height: 6px; margin: -3px 0 0 -3px; background: var(--amber); }
+.cursor-ring {
+  width: 34px; height: 34px; margin: -17px 0 0 -17px;
+  border: 1px solid color-mix(in srgb, var(--paper) 45%, transparent);
+  display: grid; place-items: center;
+  font-family: var(--mono); font-size: 10px; letter-spacing: .08em; color: var(--ink);
+  transition: opacity .2s, width .25s, height .25s, margin .25s, background-color .25s, border-color .25s;
+}
+.cursor-ring span { opacity: 0; transition: opacity .15s; white-space: nowrap; }
+.cursor-ring.is-hover { width: 54px; height: 54px; margin: -27px 0 0 -27px; border-color: var(--amber); }
+.cursor-ring.has-label { width: 70px; height: 70px; margin: -35px 0 0 -35px; background: var(--amber); border-color: var(--amber); }
+.cursor-ring.has-label span { opacity: 1; }
+.cursor-on .cursor-dot.is-hidden { opacity: 0; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .statement { grid-template-columns: 1fr; gap: 16px; }
+  .case { grid-template-columns: 1fr; }
+  .desk { grid-template-columns: 1fr; }
+  .desk > div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
+}
+@media (max-width: 700px) {
+  .bar nav { display: none; }
+  .clocks .opt { display: none; }
+  .blotter-head { display: none; }
+  .trade-sum { grid-template-columns: 1fr 32px; row-gap: 6px; }
+  .trade-sum .status { grid-column: 1; grid-row: 1; }
+  .trade-sum .firm { grid-column: 1; }
+  .trade-sum .role, .trade-sum .when { grid-column: 1; }
+  .trade-sum .plus { grid-column: 2; grid-row: 1 / span 4; align-self: center; }
+  .trade-body ul, .chips { padding-left: 0; }
+  .term-grid { grid-template-columns: 1fr; }
+  .controls { border-right: 0; border-bottom: 1px solid var(--line); }
+  .name .row:last-child { padding-left: 0; }
+  .hero-intro { margin-left: 0; margin-top: 20px; }
+  .chart-caption { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track, .name .star, .clocks .live::before { animation: none; }
+  .name span.ch, .trade-body, .plus { transition: none; }
+}
+</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script defer src="assets/motion.js"></script>
+</head>
+<body>
+
+<div class="bar mono">
+  <div class="progress" aria-hidden="true"></div>
+  <div class="clocks" aria-label="Local times in Adam's target markets">
+    <span class="live">DXB <b id="t-dxb">--:--</b></span>
+    <span>YYZ <b id="t-yyz">--:--</b></span>
+    <span class="opt">LON <b id="t-lon">--:--</b></span>
+  </div>
+  <nav aria-label="Sections">
+    <a href="#experience">Experience</a>
+    <a href="#capdeploy">Projects</a>
+    <a href="#off-desk">Outside work</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</div>
+
+<header class="hero">
+  <div class="hero-meta mono">
+    <span>Finance &amp; Accounting <span class="amber">/</span> CFA Level I candidate</span>
+    <span>Based in Dubai <span class="amber">·</span> Canadian citizen</span>
+  </div>
+  <h1 class="name" id="name" aria-label="Adam Mourad">
+    <span class="row" aria-hidden="true">Adam<span class="star">✦</span></span>
+    <span class="row" aria-hidden="true">Mourad</span>
+  </h1>
+  <p class="hero-intro">BBA in Finance &amp; Accounting from Canadian University Dubai (Dec 2026). Looking for <strong>FP&amp;A, capital markets and investment banking</strong> roles in Canada, London and Dubai from early 2027.</p>
+  <div class="chart-wrap">
+    <p class="chart-caption mono" id="chart-caption">One line, two readings: a price chart</p>
+    <div class="mode" role="group" aria-label="Chart reading">
+      <button type="button" id="m-mkt" aria-pressed="true">Markets</button>
+      <button type="button" id="m-mtn" aria-pressed="false">Mountains</button>
+    </div>
+    <canvas id="hero-chart" aria-label="Decorative line that reads as a price chart or a race elevation profile"></canvas>
+  </div>
+</header>
+
+<div class="ticker mono" aria-label="Key facts">
+  <div class="ticker-track" id="ticker">
+    <span class="ticker-item"><i>▲</i>BBA Finance &amp; Accounting · CUD · Dec 2026</span>
+    <span class="ticker-item"><i>▲</i>CFA Level I · Feb 2027</span>
+    <span class="ticker-item"><i>◆</i>Based in Dubai</span>
+    <span class="ticker-item"><i>▲</i>Open to FP&amp;A · Capital markets · Investment banking</span>
+    <span class="ticker-item"><i>⇄</i>Dubai · Toronto · London</span>
+    <span class="ticker-item"><i>▲</i>Market Analyst Intern · Progesys</span>
+  </div>
+</div>
+
+<main class="wrap">
+
+<section class="statement" aria-label="About">
+  <div class="side mono">About</div>
+  <p>Raised in Dubai. I like problems that end in a number: <span class="it">an IRR, a valuation, a race split.</span></p>
+</section>
+
+<section class="sec" id="experience">
+  <div class="sec-head">
+    <h2>Experience</h2>
+    <span class="mono">Trade blotter · 3 positions</span>
+  </div>
+  <div class="blotter" role="list">
+    <div class="blotter-head mono" aria-hidden="true"><span>Status</span><span>Company</span><span>Role</span><span>Dates</span><span></span></div>
+
+    <div class="trade" role="listitem" data-open="true">
+      <button class="trade-sum" type="button" aria-expanded="true" data-cursor="Close">
+        <span class="status live">CURRENT</span>
+        <span class="firm">Progesys</span>
+        <span class="role">Market Analyst Intern</span>
+        <span class="when">AUG 2026 – NOW</span>
+        <span class="plus" aria-hidden="true">+</span>
+      </button>
+      <div class="trade-body"><div>
+        <ul>
+          <li>Build proposals and pre-qualification submissions for project management and engineering mandates, including mining and infrastructure work.</li>
+          <li>Research material and resource costs that feed project pricing.</li>
+          <li>Trained in cost control, scheduling and mining valuation: NAV, P/NAV and EV/oz comparables.</li>
+        </ul>
+        <div class="chips"><span>Contruent</span><span>Primavera P6</span><span>Mining valuation</span><span>Proposals</span></div>
+      </div></div>
+    </div>
+
+    <div class="trade" role="listitem" data-open="false">
+      <button class="trade-sum" type="button" aria-expanded="false" data-cursor="Open">
+        <span class="status">COMPLETED</span>
+        <span class="firm">VIFM<small>Virginia Institute of Finance &amp; Management</small></span>
+        <span class="role">Finance Data Analyst Intern</span>
+        <span class="when">JUN – AUG 2025</span>
+        <span class="plus" aria-hidden="true">+</span>
+      </button>
+      <div class="trade-body"><div>
+        <ul>
+          <li>Queried and structured large financial datasets in SQL to feed an AI-driven market-trend prediction model.</li>
+          <li>Standardised financial statements in Excel and redesigned data-entry workflows, cutting errors and turnaround time.</li>
+        </ul>
+        <div class="chips"><span>SQL</span><span>Excel</span><span>Financial statements</span><span>Data workflows</span></div>
+      </div></div>
+    </div>
+
+    <div class="trade" role="listitem" data-open="false">
+      <button class="trade-sum" type="button" aria-expanded="false" data-cursor="Open">
+        <span class="status">COMPLETED</span>
+        <span class="firm">Transmed</span>
+        <span class="role">Supply Chain Analyst Intern</span>
+        <span class="when">NOV 2023 – JAN 2024</span>
+        <span class="plus" aria-hidden="true">+</span>
+      </button>
+      <div class="trade-body"><div>
+        <ul>
+          <li>Ran root-cause analysis on CFR (cost and freight) shipment disruptions to keep ordering on time.</li>
+          <li>Supported forecast and replenishment reviews in Logomate, comparing shipment and sales projections to reduce inventory risk.</li>
+        </ul>
+        <div class="chips"><span>Logomate</span><span>Root-cause analysis</span><span>Forecasting</span><span>Inventory</span></div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="capdeploy">
+  <div class="sec-head">
+    <h2>Projects</h2>
+    <span class="mono">Built, not bought · CapDeploy</span>
+  </div>
+  <div class="case">
+    <div class="case-copy">
+      <h3>Cap<span class="amber">Deploy</span></h3>
+      <p>Off-plan property is sold on a payment plan, so the price you see tells you little about the return. CapDeploy models the staggered payments and gives the number that matters.</p>
+      <p>The full version has a payment matrix, unlevered XIRR, peak capital, a cumulative cash-flow chart, a two-way sensitivity grid and CSV export. This is a pocket version. Move the sliders.</p>
+      <!-- TODO: add when CapDeploy has a public URL:
+      <a class="cta" href="CAPDEPLOY_URL" target="_blank" rel="noopener">Open the full tool <span aria-hidden="true">↗</span></a> -->
+    </div>
+
+    <div class="term" aria-label="Off-plan return calculator">
+      <div class="term-top mono"><span>CAPDEPLOY / POCKET</span><span class="amber">● LIVE CALC</span></div>
+      <div class="term-grid">
+        <div class="controls">
+          <div class="ctl"><label class="mono" for="price">Purchase price <output id="o-price"></output></label>
+            <input type="range" id="price" min="500000" max="5000000" step="50000" value="1800000"></div>
+          <div class="ctl"><label class="mono" for="down">Down payment <output id="o-down"></output></label>
+            <input type="range" id="down" min="5" max="40" step="1" value="20"></div>
+          <div class="ctl"><label class="mono" for="during">During construction <output id="o-during"></output></label>
+            <input type="range" id="during" min="0" max="70" step="1" value="40"></div>
+          <div class="ctl"><label class="mono" for="months">Months to handover <output id="o-months"></output></label>
+            <input type="range" id="months" min="12" max="60" step="1" value="36"></div>
+          <div class="ctl"><label class="mono" for="growth">Price growth / yr <output id="o-growth"></output></label>
+            <input type="range" id="growth" min="-5" max="15" step="0.5" value="6"></div>
+        </div>
+        <div class="results">
+          <div class="kpi"><div class="mono">Unlevered IRR</div><div class="v big" id="r-irr">–</div></div>
+          <div class="kpi"><div class="mono">Peak capital</div><div class="v" id="r-peak">–</div></div>
+          <div class="kpi"><div class="mono">Net profit at handover</div><div class="v" id="r-profit">–</div></div>
+          <div class="split mono" id="r-split"></div>
+        </div>
+      </div>
+      <canvas id="cf-chart" aria-label="Cumulative cash position by month"></canvas>
+      <div class="term-foot mono">Assumes a sale at handover and 4% DLD fee paid upfront. Ignores agency fees and service charges. Illustrative only.</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="off-desk">
+  <div class="sec-head">
+    <h2>Outside<br>work</h2>
+    <span class="mono">Off the desk · Endurance · Content</span>
+  </div>
+  <div class="desk">
+    <div>
+      <span class="mono">01 / Swim · Bike · Run</span>
+      <div class="big">Triathlon</div>
+      <p>Triathlete working toward IRONMAN 70.3, training through Gulf summers before sunrise.</p>
+    </div>
+    <div>
+      <span class="mono">02 / 42.2 km</span>
+      <div class="big">Marathon</div>
+      <p>Road racing across the region. Pacing a marathon and sizing a position use the same discipline.</p>
+    </div>
+    <div>
+      <span class="mono">03 / Pavement and Peaks</span>
+      <div class="big">YouTube</div>
+      <p><a href="https://www.youtube.com/@PavementandPeaks" target="_blank" rel="noopener"><strong>Pavement and Peaks</strong></a>, my channel on endurance sport.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <span class="mono">Open to full-time roles from early 2027 · FP&amp;A · Capital markets · Investment banking</span>
+  <a class="talk" href="mailto:adam.25.mourad@gmail.com" data-cursor="Say hi"><span>Let's</span> <span>talk</span><span class="arrow amber">↗</span></a>
+  <div class="links">
+    <a href="mailto:adam.25.mourad@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/adammourad/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://www.youtube.com/@PavementandPeaks" target="_blank" rel="noopener">YouTube</a>
+    <a href="cv/Adam-Mourad-CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+  </div>
+</section>
+
+<footer class="mono">
+  <span>© 2026 Adam Mourad</span>
+  <span>Dubai · Toronto · London</span>
+</footer>
+
+</main>
+
+<script>
+(function () {
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const css = getComputedStyle(document.documentElement);
+  const C = {
+    paper: css.getPropertyValue("--paper").trim(),
+    dim: css.getPropertyValue("--dim").trim(),
+    line: css.getPropertyValue("--line").trim(),
+    amber: css.getPropertyValue("--amber").trim(),
+    ink: css.getPropertyValue("--ink").trim()
+  };
+
+  /* ---------- Clocks ---------- */
+  const zones = [["t-dxb", "Asia/Dubai"], ["t-yyz", "America/Toronto"], ["t-lon", "Europe/London"]];
+  function tickClocks() {
+    const now = new Date();
+    zones.forEach(([id, tz]) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = new Intl.DateTimeFormat("en-GB", { hour: "2-digit", minute: "2-digit", timeZone: tz }).format(now);
+    });
+  }
+  tickClocks(); setInterval(tickClocks, 15000);
+
+  /* ---------- Ticker ---------- */
+  // Facts are in the HTML (readable without JS); duplicate once for a seamless loop.
+  const track = document.getElementById("ticker");
+  Array.from(track.children).forEach(n => { const c = n.cloneNode(true); c.setAttribute("aria-hidden", "true"); track.appendChild(c); });
+
+  /* ---------- Kinetic name ---------- */
+  const name = document.getElementById("name");
+  name.querySelectorAll(".row").forEach(row => {
+    const nodes = Array.from(row.childNodes);
+    row.textContent = "";
+    nodes.forEach(n => {
+      if (n.nodeType === 3) {
+        n.textContent.split("").forEach(c => { const s = document.createElement("span"); s.className = "ch"; s.textContent = c; row.appendChild(s); });
+      } else row.appendChild(n);
+    });
+  });
+  const chars = Array.from(name.querySelectorAll(".ch"));
+  if (!reduce) {
+    let pe = null, praf = 0;
+    window.addEventListener("pointermove", e => {
+      if (e.pointerType === "touch") return;
+      pe = e;
+      if (praf) return;
+      praf = requestAnimationFrame(() => {
+        praf = 0;
+        chars.forEach(ch => {
+          const r = ch.getBoundingClientRect();
+          const d = Math.hypot(pe.clientX - (r.left + r.width / 2), pe.clientY - (r.top + r.height / 2));
+          ch.style.setProperty("--w", Math.round(300 + 500 * Math.min(1, d / 420)));
+        });
+      });
+    }, { passive: true });
+  }
+
+  /* ---------- Hero chart: price / elevation ---------- */
+  const hc = document.getElementById("hero-chart");
+  const hctx = hc.getContext("2d");
+  // deterministic path
+  let seed = 7;
+  const rand = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  const N = 220, pts = [];
+  let v = 0.42;
+  for (let i = 0; i < N; i++) {
+    const trend = Math.sin(i / 34) * 0.004 + 0.0016;
+    v += trend + (rand() - 0.5) * 0.05;
+    v = Math.max(0.08, Math.min(0.95, v));
+    pts.push(v);
+  }
+  // smooth
+  const sm = pts.map((p, i) => { let s = 0, c = 0; for (let k = -2; k <= 2; k++) { const j = i + k; if (j >= 0 && j < N) { s += pts[j]; c++; } } return s / c; });
+  // progress = intro draw on load, then the rest of the line is drawn by scroll (motion.js).
+  // Without the motion layer, the intro simply draws the whole line.
+  let mode = "mkt", mix = 0, intro = reduce ? 1 : 0, scrollP = 0, raf = 0, last = 0;
+  const introTarget = () => (window.__heroScrub ? 0.3 : 1);
+
+  function sizeCanvas(c) {
+    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    const r = c.getBoundingClientRect();
+    c.width = Math.max(1, Math.round(r.width * dpr));
+    c.height = Math.max(1, Math.round(r.height * dpr));
+    return { w: r.width, h: r.height, dpr };
+  }
+  let H = sizeCanvas(hc);
+
+  function drawHero() {
+    const { w, h, dpr } = H;
+    const ctx = hctx;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, w, h);
+    const padT = 56, padB = 28, x = i => (i / (N - 1)) * (w - 10), y = v => padT + (1 - v) * (h - padT - padB);
+    const progress = Math.min(1, intro + (1 - intro) * scrollP);
+    const f = Math.max(1, (N - 1) * progress), i0 = Math.min(N - 1, Math.floor(f));
+    const endV = i0 >= N - 1 ? sm[N - 1] : sm[i0] + (sm[i0 + 1] - sm[i0]) * (f - i0);
+    const ex = x(f), ey = y(endV);
+
+    // grid (fades out toward mountains)
+    ctx.globalAlpha = 1 - mix * 0.7;
+    ctx.strokeStyle = C.line; ctx.lineWidth = 1;
+    for (let g = 0; g <= 4; g++) { const gy = padT + g * (h - padT - padB) / 4; ctx.beginPath(); ctx.moveTo(0, gy + .5); ctx.lineTo(w, gy + .5); ctx.stroke(); }
+    ctx.globalAlpha = 1;
+
+    // filled terrain (grows with mix)
+    ctx.beginPath(); ctx.moveTo(x(0), h);
+    for (let i = 0; i <= i0; i++) ctx.lineTo(x(i), y(sm[i]));
+    ctx.lineTo(ex, ey); ctx.lineTo(ex, h); ctx.closePath();
+    const grad = ctx.createLinearGradient(0, padT, 0, h);
+    grad.addColorStop(0, `rgba(255,138,31,${0.10 + mix * 0.35})`);
+    grad.addColorStop(1, "rgba(255,138,31,0)");
+    ctx.fillStyle = grad; ctx.fill();
+
+    // line
+    ctx.beginPath();
+    for (let i = 0; i <= i0; i++) { const px = x(i), py = y(sm[i]); i ? ctx.lineTo(px, py) : ctx.moveTo(px, py); }
+    ctx.lineTo(ex, ey);
+    ctx.strokeStyle = C.amber; ctx.lineWidth = 2; ctx.lineJoin = "round"; ctx.stroke();
+
+    // live readout: price change, or km + elevation
+    const mtn = mix >= 0.5;
+    const chg = (endV / sm[0] - 1) * 100;
+    let peakSoFar = 0; for (let i = 0; i <= i0; i++) peakSoFar = Math.max(peakSoFar, sm[i]);
+    const value = mtn ? `${(progress * 21.1).toFixed(1)} KM · ${Math.round(40 + endV * 360)} M`
+                      : `${chg >= 0 ? "+" : ""}${chg.toFixed(1)}%`;
+    const tag = mtn ? (endV >= peakSoFar - 0.002 ? "▲ SUMMIT" : (sm[Math.min(N - 1, i0 + 1)] >= sm[i0] ? "▲ CLIMB" : "▼ DESCENT"))
+                    : (chg >= 0 ? "▲ OUTPERFORM" : "▼ DRAWDOWN");
+
+    // crosshair to the right edge + value box, like a last-price marker
+    ctx.font = "11px 'JetBrains Mono', monospace"; ctx.textBaseline = "middle";
+    // when the line reaches the box, lift the box above the endpoint instead of covering it
+    const vw = ctx.measureText(value).width + 14, near = ex > w - vw - 24;
+    const by = Math.max(padT - 8, Math.min(h - padB - 10, near ? (ey - 28 < padT + 4 ? ey + 28 : ey - 28) : ey));
+    if (!near) {
+      ctx.setLineDash([3, 4]); ctx.strokeStyle = "rgba(255,138,31,.55)"; ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(ex + 8, ey + .5); ctx.lineTo(w - vw, by + .5); ctx.stroke(); ctx.setLineDash([]);
+    }
+    ctx.fillStyle = C.amber; ctx.fillRect(w - vw, by - 10, vw, 20);
+    ctx.fillStyle = C.ink; ctx.fillText(value, w - vw + 7, by + 1);
+
+    // endpoint
+    ctx.fillStyle = C.ink; ctx.beginPath(); ctx.arc(ex, ey, 6, 0, Math.PI * 2); ctx.fill();
+    ctx.strokeStyle = C.amber; ctx.lineWidth = 2; ctx.stroke();
+
+    // axis labels
+    ctx.textBaseline = "alphabetic"; ctx.fillStyle = C.dim;
+    const labels = mtn ? ["0 KM", "5 KM", "10 KM", "15 KM", "21.1 KM"] : ["Q1", "Q2", "Q3", "Q4"];
+    labels.forEach((t, i) => { const lx = (i / (labels.length - 1)) * (w - 60); ctx.fillText(t, lx, h - 8); });
+    ctx.fillStyle = C.amber;
+    const tw = ctx.measureText(tag).width;
+    ctx.fillText(tag, Math.max(4, Math.min(w - vw - tw - 12, ex + 12)), near ? by + 4 : Math.max(padT - 20, ey - 14));
+  }
+
+  function kick() { if (!raf) raf = requestAnimationFrame(animate); }
+  function animate(now) {
+    raf = 0;
+    const dt = last ? Math.min(50, now - last) : 16; last = now;   // time-based, same speed at 60 or 120 Hz
+    const target = mode === "mtn" ? 1 : 0, it = introTarget();
+    mix += (target - mix) * (reduce ? 1 : 1 - Math.pow(0.88, dt / 16.7));
+    if (intro < it) intro = Math.min(it, intro + dt / 1400);
+    drawHero();
+    if (Math.abs(target - mix) > 0.002 || intro < it) kick(); else last = 0;
+  }
+  kick();
+  // Hooks for motion.js; if the motion layer never loads, finish the line.
+  window.__hero = { setScroll(p) { scrollP = p; drawHero(); }, kick, state: () => ({ intro, scrollP, mix, raf, last, target: introTarget() }) };
+  window.addEventListener("load", () => { if (!window.ScrollTrigger) { window.__heroScrub = false; kick(); } });
+
+  const bM = document.getElementById("m-mkt"), bT = document.getElementById("m-mtn"), cap = document.getElementById("chart-caption");
+  function setMode(m) {
+    mode = m;
+    bM.setAttribute("aria-pressed", m === "mkt"); bT.setAttribute("aria-pressed", m === "mtn");
+    cap.textContent = m === "mkt" ? "One line, two readings: a price chart" : "Same line, read as a half-marathon elevation profile";
+    kick();
+  }
+  bM.addEventListener("click", () => setMode("mkt"));
+  bT.addEventListener("click", () => setMode("mtn"));
+
+  /* ---------- Blotter ---------- */
+  document.querySelectorAll(".trade").forEach(t => {
+    const b = t.querySelector(".trade-sum");
+    b.addEventListener("click", () => {
+      const open = t.dataset.open !== "true";
+      t.dataset.open = open; b.setAttribute("aria-expanded", open);
+    });
+  });
+
+  /* ---------- CapDeploy pocket ---------- */
+  const $ = id => document.getElementById(id);
+  const fmtAED = n => {
+    const a = Math.abs(n);
+    const s = a >= 1e6 ? (a / 1e6).toFixed(2) + "M" : Math.round(a / 1e3) + "K";
+    return (n < 0 ? "−" : "") + "AED " + s;
+  };
+
+  function flows(P, downPct, duringPct, M, g) {
+    const handPct = Math.max(0, 100 - downPct - duringPct);
+    const cf = new Array(M + 1).fill(0);
+    cf[0] -= P * downPct / 100 + P * 0.04;          // down payment + 4% DLD fee
+    const inst = M > 1 ? P * duringPct / 100 / (M - 1) : 0;
+    for (let m = 1; m < M; m++) cf[m] -= inst;      // monthly construction instalments
+    if (M <= 1) cf[M] -= P * duringPct / 100;
+    cf[M] -= P * handPct / 100;                      // handover payment
+    cf[M] += P * Math.pow(1 + g / 100, M / 12);      // sale at handover
+    return { cf, handPct };
+  }
+  function irrAnnual(cf) {
+    const npv = r => cf.reduce((s, c, t) => s + c / Math.pow(1 + r, t), 0);
+    let lo = -0.99, hi = 1.0, flo = npv(lo), fhi = npv(hi);
+    if (flo * fhi > 0) return null;
+    for (let k = 0; k < 200; k++) {
+      const mid = (lo + hi) / 2, fm = npv(mid);
+      if (Math.abs(fm) < 1e-6) { lo = hi = mid; break; }
+      if (flo * fm < 0) { hi = mid; fhi = fm; } else { lo = mid; flo = fm; }
+    }
+    return Math.pow(1 + (lo + hi) / 2, 12) - 1;
+  }
+  window.__capdeploy = { flows, irrAnnual };
+
+  const cc = $("cf-chart"), cctx = cc.getContext("2d");
+  let CC = sizeCanvas(cc);
+  function drawCF(cf) {
+    const { w, h, dpr } = CC, ctx = cctx;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, w, h);
+    const cum = []; cf.reduce((s, c, i) => (cum[i] = s + c), 0);
+    const mn = Math.min(0, ...cum), mx = Math.max(0, ...cum);
+    const pad = 16, y = v => pad + (mx - v) / (mx - mn || 1) * (h - pad * 2);
+    const bw = (w - pad * 2) / cum.length;
+    ctx.strokeStyle = C.line; ctx.beginPath(); ctx.moveTo(pad, y(0) + .5); ctx.lineTo(w - pad, y(0) + .5); ctx.stroke();
+    cum.forEach((v, i) => {
+      ctx.fillStyle = v >= 0 ? C.amber : "rgba(237,230,214,0.28)";
+      const x0 = pad + i * bw, y0 = y(Math.max(0, v)), y1 = y(Math.min(0, v));
+      ctx.fillRect(x0 + 0.5, y0, Math.max(1, bw - 1.5), Math.max(1, y1 - y0));
+    });
+    ctx.font = "10px 'JetBrains Mono', monospace"; ctx.fillStyle = C.dim;
+    ctx.fillText("CUMULATIVE CASH · MONTH 0 → " + (cum.length - 1), pad, 12);
+  }
+
+  function calc() {
+    let P = +$("price").value, d = +$("down").value, du = +$("during").value, M = +$("months").value, g = +$("growth").value;
+    if (d + du > 100) { du = 100 - d; $("during").value = du; }
+    $("o-price").textContent = fmtAED(P);
+    $("o-down").textContent = d + "%";
+    $("o-during").textContent = du + "%";
+    $("o-months").textContent = M;
+    $("o-growth").textContent = (g > 0 ? "+" : "") + g + "%";
+    const { cf, handPct } = flows(P, d, du, M, g);
+    const irr = irrAnnual(cf);
+    let cum = 0, peak = 0; cf.forEach(c => { cum += c; peak = Math.min(peak, cum); });
+    const profit = cf.reduce((a, b) => a + b, 0);
+    $("r-irr").textContent = irr === null ? "n/a" : (irr * 100).toFixed(1) + "%";
+    $("r-peak").textContent = fmtAED(-peak).replace("−", "");
+    $("r-profit").textContent = fmtAED(profit);
+    $("r-split").textContent = `Plan ${d} / ${du} / ${handPct} · down / construction / handover`;
+    drawCF(cf);
+  }
+  ["price", "down", "during", "months", "growth"].forEach(id => $(id).addEventListener("input", calc));
+  calc();
+
+  let rt;
+  window.addEventListener("resize", () => {
+    clearTimeout(rt);
+    rt = setTimeout(() => { H = sizeCanvas(hc); CC = sizeCanvas(cc); drawHero(); calc(); }, 120);
+  });
+})();
+</script>
+</body>
+</html>
